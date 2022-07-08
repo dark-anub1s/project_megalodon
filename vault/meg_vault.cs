@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace vault
 {
-    public partial class Form1 : Form
+    public partial class megalogon_login : Form
     {
-        public Form1()
+        public megalogon_login()
         {
             InitializeComponent();
         }

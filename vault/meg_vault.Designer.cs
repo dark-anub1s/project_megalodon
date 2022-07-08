@@ -1,7 +1,7 @@
 ﻿
 namespace vault
 {
-    partial class Form1
+    partial class megalogon_login
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,10 +29,18 @@ namespace vault
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // megalogon_login
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(96)))), ((int)(((byte)(101)))));
+            this.ClientSize = new System.Drawing.Size(878, 568);
+            this.Name = "megalogon_login";
+            this.Text = "Megalodon: RSA Password Manager";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
