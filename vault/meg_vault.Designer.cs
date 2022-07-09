@@ -124,6 +124,7 @@ namespace vault
             this.register_button.TabIndex = 7;
             this.register_button.Text = "Register";
             this.register_button.UseVisualStyleBackColor = false;
+            this.register_button.Click += new System.EventHandler(this.register_button_Click);
             // 
             // megalogon_login
             // 

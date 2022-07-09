@@ -16,5 +16,14 @@ namespace vault
         {
             InitializeComponent();
         }
+
+        private void generate_rsa_pair_Click(object sender, EventArgs e)
+        {
+            RsaEncryption rsa = new RsaEncryption();
+
+            rsa_private.Text = rsa.GetPrivateKey();
+
+            rsa_public.Text = rsa.GetPublicKey();
+        }
     }
 }

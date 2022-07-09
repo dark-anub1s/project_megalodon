@@ -93,5 +93,11 @@ namespace vault
                 MessageBox.Show("No File.");
             }
         }
+
+        private void register_button_Click(object sender, EventArgs e)
+        {
+            user_registration new_user = new user_registration();
+            new_user.Show();
+        }
     }
 }
