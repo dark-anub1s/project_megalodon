@@ -30,10 +30,6 @@ namespace vault
         private void InitializeComponent()
         {
             this.generate_rsa_pair = new System.Windows.Forms.Button();
-            this.rsa_private = new System.Windows.Forms.TextBox();
-            this.rsa_public = new System.Windows.Forms.TextBox();
-            this.private_key = new System.Windows.Forms.Label();
-            this.public_key = new System.Windows.Forms.Label();
             this.user_add = new System.Windows.Forms.PictureBox();
             this.new_user_box = new System.Windows.Forms.TextBox();
             this.check_username = new System.Windows.Forms.Button();
@@ -55,45 +51,6 @@ namespace vault
             this.generate_rsa_pair.Text = "Create RSA Pair";
             this.generate_rsa_pair.UseVisualStyleBackColor = false;
             this.generate_rsa_pair.Click += new System.EventHandler(this.generate_rsa_pair_Click);
-            // 
-            // rsa_private
-            // 
-            this.rsa_private.Location = new System.Drawing.Point(12, 331);
-            this.rsa_private.Multiline = true;
-            this.rsa_private.Name = "rsa_private";
-            this.rsa_private.Size = new System.Drawing.Size(443, 296);
-            this.rsa_private.TabIndex = 1;
-            // 
-            // rsa_public
-            // 
-            this.rsa_public.Location = new System.Drawing.Point(697, 331);
-            this.rsa_public.Multiline = true;
-            this.rsa_public.Name = "rsa_public";
-            this.rsa_public.Size = new System.Drawing.Size(443, 296);
-            this.rsa_public.TabIndex = 2;
-            // 
-            // private_key
-            // 
-            this.private_key.AutoSize = true;
-            this.private_key.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.private_key.ForeColor = System.Drawing.SystemColors.Control;
-            this.private_key.Location = new System.Drawing.Point(13, 310);
-            this.private_key.Name = "private_key";
-            this.private_key.Size = new System.Drawing.Size(88, 18);
-            this.private_key.TabIndex = 3;
-            this.private_key.Text = "Private Key";
-            // 
-            // public_key
-            // 
-            this.public_key.AutoSize = true;
-            this.public_key.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.public_key.ForeColor = System.Drawing.SystemColors.Control;
-            this.public_key.Location = new System.Drawing.Point(697, 310);
-            this.public_key.Name = "public_key";
-            this.public_key.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.public_key.Size = new System.Drawing.Size(82, 18);
-            this.public_key.TabIndex = 4;
-            this.public_key.Text = "Public Key";
             // 
             // user_add
             // 
@@ -155,6 +112,8 @@ namespace vault
             this.Save.TabIndex = 10;
             this.Save.Text = "Save";
             this.Save.UseVisualStyleBackColor = false;
+            this.Save.Visible = false;
+            this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
             // user_registration
             // 
@@ -168,10 +127,6 @@ namespace vault
             this.Controls.Add(this.check_username);
             this.Controls.Add(this.new_user_box);
             this.Controls.Add(this.user_add);
-            this.Controls.Add(this.public_key);
-            this.Controls.Add(this.private_key);
-            this.Controls.Add(this.rsa_public);
-            this.Controls.Add(this.rsa_private);
             this.Controls.Add(this.generate_rsa_pair);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "user_registration";
@@ -186,10 +141,6 @@ namespace vault
         #endregion
 
         private System.Windows.Forms.Button generate_rsa_pair;
-        private System.Windows.Forms.TextBox rsa_private;
-        private System.Windows.Forms.TextBox rsa_public;
-        private System.Windows.Forms.Label private_key;
-        private System.Windows.Forms.Label public_key;
         private System.Windows.Forms.PictureBox user_add;
         private System.Windows.Forms.TextBox new_user_box;
         private System.Windows.Forms.Button check_username;
