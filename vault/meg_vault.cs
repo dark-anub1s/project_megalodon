@@ -3,7 +3,7 @@
  Date: 7-9-2022
  Program Discription: This will be a modification of a program I have already written in Python.
  This program is a password manager that uses RSA for the user account
- Estamated Time to Complete: 4 Hours
+ Estamated Time to Complete: 4 Hours (2 hours in)
  */
 using System;
 using System.Collections.Generic;
@@ -20,39 +20,6 @@ using System.Xml.Serialization;
 
 namespace vault
 {
-
-    public class RsaEncryption
-    {
-        private static RSACryptoServiceProvider csp = new RSACryptoServiceProvider(2048);
-        private RSAParameters _privayeKey;
-        private RSAParameters _publicKey;
-
-        public RsaEncryption()
-        {
-            _privayeKey = csp.ExportParameters(true);
-            _publicKey = csp.ExportParameters(false);
-        }
-
-        public string GetPublicKey()
-        {
-            var sw = new StringWriter();
-            var xs = new XmlSerializer(typeof(RSAParameters));
-            xs.Serialize(sw, _publicKey);
-
-            return sw.ToString();
-        }
-
-        public string GetPrivateKey()
-        {
-            var sw = new StringWriter();
-            var xs = new XmlSerializer(typeof(RSAParameters));
-
-            xs.Serialize(sw, _privayeKey);
-
-            return sw.ToString();
-        }
-    }
-
     public partial class megalogon_login : Form
     {
         public megalogon_login()
@@ -90,7 +57,7 @@ namespace vault
             }
             catch
             {
-                MessageBox.Show("No File.");
+                MessageBox.Show("Error.");
             }
         }
 
@@ -98,6 +65,38 @@ namespace vault
         {
             user_registration new_user = new user_registration();
             new_user.Show();
+        }
+    }
+
+    public class RsaEncryption
+    {
+        private static RSACryptoServiceProvider csp = new RSACryptoServiceProvider(2048);
+        private RSAParameters _privayeKey;
+        private RSAParameters _publicKey;
+
+        public RsaEncryption()
+        {
+            _privayeKey = csp.ExportParameters(true);
+            _publicKey = csp.ExportParameters(false);
+        }
+
+        public string GetPublicKey()
+        {
+            var sw = new StringWriter();
+            var xs = new XmlSerializer(typeof(RSAParameters));
+            xs.Serialize(sw, _publicKey);
+
+            return sw.ToString();
+        }
+
+        public string GetPrivateKey()
+        {
+            var sw = new StringWriter();
+            var xs = new XmlSerializer(typeof(RSAParameters));
+
+            xs.Serialize(sw, _privayeKey);
+
+            return sw.ToString();
         }
     }
 }

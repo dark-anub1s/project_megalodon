@@ -25,5 +25,24 @@ namespace vault
 
             rsa_public.Text = rsa.GetPublicKey();
         }
+
+        private void key_save_box_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void check_username_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //This block will be used to check that 
+                var checkUsername = new_user_box.Text;
+            }
+
+            catch
+            {
+
+            }
+        }
     }
 }

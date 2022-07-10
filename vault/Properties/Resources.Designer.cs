@@ -63,6 +63,16 @@ namespace vault.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FIle_Save {
+            get {
+                object obj = ResourceManager.GetObject("FIle Save", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo {
             get {
                 object obj = ResourceManager.GetObject("logo", resourceCulture);
@@ -76,6 +86,16 @@ namespace vault.Properties {
         internal static System.Drawing.Bitmap private_rsa {
             get {
                 object obj = ResourceManager.GetObject("private_rsa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_Add {
+            get {
+                object obj = ResourceManager.GetObject("User Add", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
