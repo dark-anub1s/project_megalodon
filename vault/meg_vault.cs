@@ -29,7 +29,13 @@ namespace vault
 
         private void login_button_Click(object sender, EventArgs e)
         {
-
+            if (username_box.Text == "thiggins" && rsa_private_key.Text == "key")
+            {
+                user_account user_acc = new user_account();
+                this.Hide();
+                user_acc.Closed += (s, args) => this.Close();
+                user_acc.Show();
+            }
         }
 
         private void username_box_TextChanged(object sender, EventArgs e)
@@ -99,4 +105,5 @@ namespace vault
             return sw.ToString();
         }
     }
+
 }
