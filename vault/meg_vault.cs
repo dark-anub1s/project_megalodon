@@ -72,6 +72,21 @@ namespace vault
             user_registration new_user = new user_registration();
             new_user.Show();
         }
+
+        private void user_icon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rsa_icon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
     public class RsaEncryption

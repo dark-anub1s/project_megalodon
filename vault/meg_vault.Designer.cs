@@ -62,15 +62,16 @@ namespace vault
             this.user_icon.Size = new System.Drawing.Size(48, 48);
             this.user_icon.TabIndex = 1;
             this.user_icon.TabStop = false;
+            this.user_icon.Click += new System.EventHandler(this.user_icon_Click);
             // 
             // username_box
             // 
             this.username_box.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.username_box.Location = new System.Drawing.Point(77, 292);
             this.username_box.Name = "username_box";
+            this.username_box.PlaceholderText = "Username";
             this.username_box.Size = new System.Drawing.Size(165, 26);
             this.username_box.TabIndex = 2;
-            this.username_box.Text = "Username";
             this.username_box.TextChanged += new System.EventHandler(this.username_box_TextChanged);
             // 
             // rsa_icon
@@ -81,15 +82,16 @@ namespace vault
             this.rsa_icon.Size = new System.Drawing.Size(48, 48);
             this.rsa_icon.TabIndex = 3;
             this.rsa_icon.TabStop = false;
+            this.rsa_icon.Click += new System.EventHandler(this.rsa_icon_Click);
             // 
             // rsa_private_key
             // 
             this.rsa_private_key.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rsa_private_key.Location = new System.Drawing.Point(77, 366);
             this.rsa_private_key.Name = "rsa_private_key";
+            this.rsa_private_key.PlaceholderText = "RSA Private Key";
             this.rsa_private_key.Size = new System.Drawing.Size(267, 26);
             this.rsa_private_key.TabIndex = 4;
-            this.rsa_private_key.Text = "RSA Private Key";
             this.rsa_private_key.TextChanged += new System.EventHandler(this.rsa_private_key_TextChanged);
             // 
             // logo
@@ -101,6 +103,7 @@ namespace vault
             this.logo.Size = new System.Drawing.Size(256, 256);
             this.logo.TabIndex = 5;
             this.logo.TabStop = false;
+            this.logo.Click += new System.EventHandler(this.logo_Click);
             // 
             // open_key
             // 

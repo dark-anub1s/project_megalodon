@@ -18,11 +18,7 @@ namespace vault
     {
         private static bool upper, lower, number, special;
         private static int PasswordSize;
-
-        private void passLabel_Click(object sender, EventArgs e)
-        {
-
-        }
+        private List<string> passHistList = new List<string>();
 
         private void UpperCheck_CheckedChanged(object sender, EventArgs e)
         {
@@ -52,6 +48,16 @@ namespace vault
             }
 
             passLabel.Text = PasswordGenerator.GeneratePassword(upper, lower, number, special, PasswordSize);
+
+            if (passHistList.Count == 10)
+            {
+                passHistList.RemoveAt(0);
+                passHistList.Add(passLabel.Text);
+            }
+            else
+            {
+                passHistList.Add(passLabel.Text);
+            }
         }
 
         private void pass_gen_Load(object sender, EventArgs e)
@@ -62,6 +68,12 @@ namespace vault
         private void pass_gen_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void historyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            passhistory passHistory = new passhistory(passHistList);
+            passHistory.Show();
         }
 
         public pass_gen()
