@@ -49,7 +49,7 @@ namespace vault
 
             passLabel.Text = PasswordGenerator.GeneratePassword(upper, lower, number, special, PasswordSize);
 
-            if (passHistList.Count == 10)
+            if (passHistList.Count == 6)
             {
                 passHistList.RemoveAt(0);
                 passHistList.Add(passLabel.Text);
